@@ -1,0 +1,37 @@
+input,textarea{
+    display: inline-block;
+    border-radius: 30px;
+    margin: 10px;
+    padding: 10px;
+    width: 70%
+}
+textarea{
+    width: 90%
+}
+div{
+    text-align: center;
+    margin: 20px;
+    border: 1px #DDD solid;
+    border-radius: 30px
+}
+
+section{
+    float: left;
+    width: 45%;
+    border: 5px #000 solid;
+    border-radius: 10px;
+    margin: 15px
+}
+
+.section-title{
+    margin: 2px;
+    font-size: 36px;
+    font-weight: bolder;
+    margin-left: 25%
+}
+
+select{
+    margin:20px;,
+    padding: 10px;
+    font-size: 20px
+}

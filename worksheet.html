@@ -1,0 +1,79 @@
+<html>
+    <head>
+          <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300|Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>   
+          <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+          <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+          <link rel="stylesheet" type="text/css" href="css/animate.css">
+          <link rel="stylesheet" type="text/css" href="css/style.css">
+          <link rel="stylesheet" href="css/worksheet.css" type="text/css">
+    </head>
+    
+    
+    <body>
+    
+    <form id="app">
+        <div>
+            
+            <select id="select" v-model="selected_index" @change="selected_index = getSelected()+1">
+                <option v-for="c,index in client">{{c.basic_info.client_name + ' : ' + (index+1)}}</option>
+            </select>
+            <label>info about {{ client[selected_index-1].basic_info.client_name }}</label>
+        </div>
+        <section>
+            <label class="section-title">Basic Information</label><br>
+            <div class="div1">
+                <label >job Name</label>
+                <input type="text" :value="client[selected_index - 1].basic_info.job_name">
+            </div>
+
+            <div class="div2">
+                <label>Client Name</label>
+                <input type="text" :value="client[selected_index - 1].basic_info.client_name">
+                <br>
+
+                <label>Client phone</label>
+                <input type="number" :value="client[selected_index - 1].basic_info.client_phone">
+                <br>
+                <label>Client email</label>
+                <input type="email" :value="client[selected_index - 1].basic_info.client_email">
+                <br>
+                <label>Client city</label>
+                <input type="text" :value="client[selected_index - 1].basic_info.client_city">
+                <br>
+            </div>
+
+            <div class="div3">
+                <label>job discrubtion</label><br>
+                <textarea :value="client[selected_index - 1].basic_info.job_dis"></textarea>
+                <br>
+            </div>
+            <div class="div4">
+                <label>start Date</label>
+                <input type="date" :value="client[selected_index - 1].basic_info.start_date">
+                <br>
+                <label>End Date</label>
+                <input type="date" :value="client[selected_index - 1].basic_info.end_date">
+                <br>
+            </div>
+
+            <div class="div5">
+                <label>Cost</label>
+                <input type="number" :value="client[selected_index - 1].basic_info.cost">
+            </div>
+        </section>
+        
+        <section>
+            <div>
+                <label>second section</label>
+            </div>
+        </section>
+        
+    </form>
+    
+    </body>
+    
+    <script src="vue/vue.js"></script>
+    <script src="vue/app.js"></script>
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+    
+</html>
